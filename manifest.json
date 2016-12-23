@@ -1,0 +1,20 @@
+{
+    "name":"Click Bait",
+    "version":"1.0",
+    "manifest_version":2,
+    "description":"Doctors hate him; 10 easy tricks to stay alive!",
+    
+    "browser_action":{
+        "default_icon":"subaru.png",
+        "default_title":"Click Bait",
+        "default_popup": "popup.html"
+    },
+    
+    "content_scripts":[
+        {
+        "matches": ["<all_urls>"],
+        "js":["script.js"],
+        "run_at": "document_end"
+        }
+    ]
+}
