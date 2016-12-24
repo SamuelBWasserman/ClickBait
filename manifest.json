@@ -2,6 +2,7 @@
     "name":"Click Bait",
     "version":"1.0",
     "manifest_version":2,
+     "options_page": "options.html",
     "description":"Doctors hate him; 10 easy tricks to stay alive!",
     
     "browser_action":{
@@ -9,6 +10,10 @@
         "default_title":"Click Bait",
         "default_popup": "popup.html"
     },
+    
+    "permissions": [
+          "storage"
+        ],
     
     "content_scripts":[
         {
