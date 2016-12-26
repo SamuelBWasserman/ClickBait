@@ -1,5 +1,20 @@
-var elements=document.getElementsByTagName('*');
+$(document).ready(function(){    
+    var clone = $('#content').clone();
 
+    clone.appendTo('body').find(':hidden').remove();
+
+    var theText = clone.text();
+
+    clone.remove();
+    var newText=theText
+    console.log(theText);
+    $("_4l5g").addClass("bad");
+    
+});
+
+var elements=document.getElementsByTagName('*');
+//var oldWord=Document.getElementById("new");
+//var newWord=Document.getElemtnById("old");
 for(var i=0;i<elements.length;i++){
     
     var element=elements[i];
@@ -9,7 +24,7 @@ for(var i=0;i<elements.length;i++){
         var node=element.childNodes[j];
         if(node.nodeType==3){
             var text=node.nodeValue;
-            var replacedText=text.replace(/jacob/g, 'toolshed')
+            var replacedText=text.replace(/jacob/g, 'herb')
             if(replacedText!=text){
                 console.log('replaced');
                 element.replaceChild(document.createTextNode(replacedText),node);
@@ -19,6 +34,11 @@ for(var i=0;i<elements.length;i++){
           }
         
         }
+    
+}
+
+function save()
+{
     
 }
     
